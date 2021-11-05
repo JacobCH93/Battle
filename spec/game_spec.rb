@@ -26,6 +26,12 @@ describe Game do
       end
     end
 
+    describe 'active Player' do 
+        it 'Defines an active player' do
+            srand(2)
+            expect(game.active_player).to eq player_1
+        end
+    end
 
 
 end

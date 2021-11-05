@@ -1,4 +1,10 @@
 <h2><%= @game.player_1.name %> HP = <%= @game.player_1.hp %>  <h2> 
 <h2><%= @game.player_2.name %> HP = <%= @game.player_2.hp %> <h2> 
-
 <a href="/attack">Attack</a>
+
+<% if @game.player_1.is_loser? %>
+<p><%= @game.player_1.name %> is the loser! <p>
+<% end %>
+<% if @game.player_2.is_loser? %>
+<p><%= @game.player_2.name %> is the loser! <p>
+<% end %>

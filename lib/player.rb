@@ -9,4 +9,9 @@ class Player
     def receive_damage 
       @hp -= 10
     end
+    def is_loser?
+        if @hp == 0
+           true
+        end
+      end
 end

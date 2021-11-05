@@ -1,3 +1,4 @@
-<h2> <%= @game.player_1.name %> attacked <%= @game.player_2.name %>!</h2>
-
-<a href="/play">OK</a>
+<h2> <%= @game.active_player.name %> attacked <%= @game.opponent.name %>!</h2>
+<form action="/change_turn" method="post">
+<button type="submit">OK</button>
+</form>
