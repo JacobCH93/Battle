@@ -1,14 +1,12 @@
 require 'game'
 
 describe Game do
+    subject(:game) { Game.new(player_1, player_2) }
+    let(:player_1) { double :player }
+    let(:player_2) { double :player }
+
 
     describe '#attack' do
-
-      subject(:game) { Game.new(player_1, player_2) }
-      let(:player_1) { double :player }
-      let(:player_2) { double :player }
-
-
       it 'Allows the player to receive damage' do
           expect(player_2).to receive(:receive_damage)
           game.attack(player_2)

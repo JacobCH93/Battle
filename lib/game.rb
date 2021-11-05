@@ -1,10 +1,10 @@
 class Game
 
-  attr_reader :player_1, :player_2
+  attr_accessor :player_1, :player_2
 
-  def initialize(p1, p2)
-    @player_1 = p1
-    @player_2 = p2
+  def initialize(player_1, player_2)
+    @player_1 = player_1
+    @player_2 = player_2
   end
     
   def attack(player)
